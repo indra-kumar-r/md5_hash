@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="/assets/favicon.ico" />
+        <title>MD5 Hash Converter</title>
+        <link rel="stylesheet" href="/styles.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.1.1/crypto-js.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <div class="header">
+            <img src="/assets/geektrust_logo.png" alt="Geektrust Logo" />
+        </div>
+        <div class="container">
+            <form class="form" onsubmit="convertToMD5()">
+                <div class="title">MD5 Hash Converter</div>
+                <input
+                    type="text"
+                    id="inputText"
+                    placeholder="Enter text to hash"
+                    autocomplete="off"
+                    required
+                />
+                <button type="submit">Generate</button>
+            </form>
+            <div class="output_section">
+                <div
+                    class="output"
+                    onclick="copyToClipboard()"
+                    id="outputHash"
+                ></div>
+                <div class="clickToCopy">Click to copy</div>
+                <div class="copiedToClipboard">Copied to Clipboard</div>
+            </div>
+        </div>
+        <div class="footer">
+            © 2024 <a href="https://www.geektrust.com/">Geektrust.com.</a> All
+            rights reserved.
+        </div>
+
+        <script defer src="/script.js"></script>
+    </body>
+</html>
